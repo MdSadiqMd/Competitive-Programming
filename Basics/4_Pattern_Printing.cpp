@@ -77,6 +77,26 @@ void hollowSquare(int n)
     }
 }
 
+void fullPyramid(int n)
+{
+    cout << "Full Pyramid" << "\n";
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j < 2 * n - 1; j++)
+        {
+            if (j >= n - (i - 1) && j <= n + (i - 1))
+            {
+                cout << "*";
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        cout << "\n";
+    }
+}
+
 int main()
 {
     rightHalfPyramid(5);
@@ -84,4 +104,5 @@ int main()
     invertedRightHalfTraingle(5);
     leftHalfPyramid(5);
     hollowSquare(5);
+    fullPyramid(5);
 }
